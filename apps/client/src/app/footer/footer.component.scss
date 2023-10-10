@@ -1,0 +1,120 @@
+// .footer {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   background-color: #101010;
+
+  // .footer-logo {
+  //   margin: 5.2rem 11.6rem 4.8rem 11.6rem;
+  // }
+
+  // .footer-links {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: column;
+
+    // a {
+    //   text-decoration: none;
+    //   color: white;
+    //   font-weight: 700;
+    //   font-size: 1.3rem;
+    //   line-height: 2.5rem;
+    //   letter-spacing: 2px;
+    //   height: 2.4rem;
+    //   margin-bottom: 1.6rem;
+    // }
+  // }
+
+  // .footer-info {
+  //   text-align: center;
+  //   margin-top: 4.8rem;
+  //   margin-bottom: 4.8rem;
+  //   font-weight: 500;
+  //   font-size: 15px;
+  //   line-height: 25px;
+  //   color: #ffffff;
+  //   opacity: 0.5;
+  // }
+
+  // .footer-copyright {
+  //   color: #ffffff;
+  //   opacity: 0.5;
+  //   height: 2.5rem;
+  //   font-weight: 700;
+  //   font-size: 15px;
+  //   line-height: 25px;
+  //   margin-bottom: 4.8rem;
+  // }
+
+  // .footer-social-media {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: row;
+  //   margin-bottom: 3.8rem;
+
+    // a img {
+    //   padding: 0.8rem;
+    // }
+  // }
+// }
+
+@media only screen and (min-width: 900px) {
+  // .footer {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-template-rows: repeat(3, 1fr);
+  // }
+
+  // .footer .footer-logo {
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   width: 80%;
+  //   margin: 5.2rem;
+  // }
+
+  // .footer .footer-links {
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  //   flex-direction: row;
+
+  //   a {
+  //     padding: 2rem;
+  //   }
+  // }
+
+  // .footer .footer-links a:last-child {
+  //   padding-right: 16.5rem;
+  // }
+
+  // .footer-info p {
+  //   text-align: start;
+  //   margin: 0 0.8rem 0 5.2rem;
+  // }
+
+  // .footer-copyright {
+  //   grid-row: 3;
+  //   margin: 0 0 4.8rem 5.2rem;
+  // }
+
+  // .footer .footer-social-media {
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  // }
+
+  // a {
+  //   padding: 0.8rem;
+  // }
+
+  // .footer-social-media a:last-child {
+  //   padding-right: 16.5rem;
+  // }
+
+  // .footer .footer-social-media a img {
+  //   padding: 0;
+  // }
+}

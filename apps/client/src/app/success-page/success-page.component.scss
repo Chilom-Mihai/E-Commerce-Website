@@ -1,0 +1,240 @@
+.success-main {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  color: black;
+  margin: 2.4rem;
+  z-index: 100;
+  max-width: 37.7rem;
+  position: absolute;
+}
+
+.success-confirmation {
+  display: flex;
+  padding: 3.2rem 0 2.4rem 6.2rem;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+
+  img {
+    background-color: #d87d4a;
+    border-radius: 100%;
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-family: Manrope;
+    font-weight: 700;
+    line-height: 2.8rem;
+    letter-spacing: 0.0857rem;
+    text-transform: uppercase;
+    width: 26.3rem;
+    padding-top: 2.3rem;
+    padding-bottom: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    font-family: Manrope;
+    font-weight: 500;
+    line-height: 2.5rem;
+    opacity: 0.5;
+    padding-bottom: 2.4rem;
+  }
+}
+
+.success-details {
+  border-radius: 8px;
+  background: #f1f1f1;
+  width: 26.3rem;
+  height: 100%;
+
+  .success-details-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 9%;
+      bottom: 0;
+      border-bottom: 2px solid black;
+      opacity: 0.08;
+      background: #000;
+      width: 21.5rem;
+      height: 0.1rem;
+      // top: 8rem;
+    }
+
+    img {
+      margin: 3.3rem 2.7rem 1.2rem 3.5rem;
+
+      width: 2.8rem;
+      height: 3.2rem;
+    }
+
+    .success-name-price {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      width: 100%;
+
+      h3 {
+        padding: 2.4rem 0 0 0;
+        width: 120%;
+        font-size: 1.5rem;
+        font-family: Manrope;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 1.4rem;
+        font-family: Manrope;
+        font-weight: 700;
+        opacity: 0.5;
+      }
+
+      h6 {
+        grid-column: 2;
+        grid-row: 1;
+        padding-left: 5.9rem;
+        padding-top: 2.4rem;
+        font-size: 1.5rem;
+        font-family: Manrope;
+        font-weight: 700;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.success-other-items {
+  font-size: 1.2rem;
+  font-family: Manrope;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 2.5rem;
+
+  h3 {
+    cursor: pointer;
+  }
+}
+
+.success-grand-total {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0px 0px 8px 8px;
+  background: #000;
+  color: white;
+  height: 9.2rem;
+  gap: 0.8rem;
+
+  h3 {
+    font-size: 1.5rem;
+    font-family: Manrope;
+    font-weight: 500;
+    line-height: 2.5rem;
+    width: 13.4rem;
+    flex-direction: column;
+    padding-left: 2.4rem;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-family: Manrope;
+    font-weight: 700;
+    width: 8.6238rem;
+    padding-left: 2.4rem;
+  }
+}
+
+.home {
+  background: #d87d4a;
+  height: 4.8rem;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: Manrope;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  width: 15.8rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  width: 70%;
+  border: none;
+  margin-top: 2.8rem;
+  margin-bottom: 3.2rem;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 99; /* Ensure the overlay appears above other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.scrollable-container {
+  max-height: 270px;
+  overflow: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+  .success-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2rem;
+    left: 40rem;
+    max-width: 54rem;
+  }
+
+  .home:hover {
+    background: #fbaf85;
+  }
+
+  .success-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .success-grand-total {
+    width: 19.8rem;
+    height: 27rem;
+    flex-shrink: 0;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

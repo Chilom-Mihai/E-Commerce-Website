@@ -1,0 +1,85 @@
+<full-stack-eshop-app-header></full-stack-eshop-app-header>
+<div class="w-100 px-[2.4rem] md:px-[2.4rem]">
+  <div class="grid gap-[6.8rem] md:grid md:grid-cols-3 md:w-full md:h-auto">
+    <full-stack-eshop-app-category
+      *ngFor="let categoryItem of categoryItems"
+      [categoryItem]="categoryItem"
+    ></full-stack-eshop-app-category>
+  </div>
+
+  <div
+    class="speaker flex items-center justify-center bg-orange2 bg-no-repeat bg-cover text-white rounded-lg mt-48 md:bg-left md:bg-contain md:h-[56rem] md:relative"
+  >
+    <div
+      class="text-center md:r-[9.5rem] md:absolute md:bottom-[12.4rem] md:h-fit md:w-[34.9rem] md:text-left"
+    >
+      <div class="flex justify-center items-center">
+        <img class="md:hidden" src="../../assets/mobile-speaker.svg" alt="" />
+      </div>
+      <div class="mt-[-16rem] md:text-start md:block">
+        <h2
+          class="flex flex-col justify-end h-32 text-[3.6rem] leading-[4rem] tracking-widest uppercase md:h-full md:text-[5.6rem] md:leading-[5.8rem] md:tracking-[.2rem] md:uppercase"
+        >
+          zx9 speaker
+        </h2>
+      </div>
+      <div class="speaker-info">
+        <p
+          class="text-[1.5rem] leading-[2.5rem] text-center opacity-75 m-[2.3rem] md:mt-[2.4rem] md:mb-[4rem] md:mx-0 md:text-left"
+        >
+          Upgrade to premium speakers that are phenomenally built to deliver
+          truly remarkable sound.
+        </p>
+      </div>
+      <button
+        class="h-[4.8rem] font-bold text-[1.3rem] leading-[1.8rem] tracking-[.1rem] mb-[5.5rem] w-64 bg-black text-white md:m-0"
+        routerLink="/product-detail/zx9-speaker"
+      >
+        SEE PRODUCT
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="bg-speaker-zx7 bg-no-repeat bg-cover mx-0 mt-[2.9rem] mb-[2.4rem] h-[32.7rem] rounded-lg md:bg-ZX7-SPEAKER md:bg-no-repeat md:bg-cover"
+  >
+    <div class="pt-[10.1rem] pr-[10.1rem] pb-[3.2rem] pl-[2.4rem]">
+      <h2
+        class="h-full text-[2.2rem] leading-[3.8rem] tracking-[.2rem] mb-[3.2rem] w-[18rem]"
+      >
+        ZX7 SPEAKER
+      </h2>
+      <button
+        class="h-[4.8rem] font-bold text-[1.3rem] w-64 bg-transparent border-solid border-black border-[.1rem]"
+        routerLink="/product-detail/zx7-speaker"
+      >
+        SEE PRODUCT
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="flex justify-center items-center flex-col mx-0 mt-[1.9rem] mb-[2.4rem] gap-[2.4rem] md:flex md:justify-start md:items-start md:flex-row md:mt-[1.9rem] md:mb-[2.4rem] md:rounded-[8rem] md:gap-[3rem]"
+  >
+    <div
+      class="bg-YX1-EARPHONES bg-center bg-cover bg-no-repeat bg-size w-full h-[20rem] rounded-[.8rem]"
+    ></div>
+    <div
+      class="bg-white2 flex justify-center items-start flex-col rounded-[.8rem] w-full h-[20rem] md:bg-white2 md:flex md:justify-center md:items-start md:flex-col md:rounded-[.8rem] md:w-full md:h-[20rem]"
+    >
+      <h2
+        class="h-[3.8rem] text-[2rem] leading-[3.8rem] tracking-[.2rem] ml-[2.4rem] w-full font-bold"
+      >
+        YX1 EARPHONES
+      </h2>
+      <button
+        class="h-[4.8rem] ml-[2.4rem] font-bold text-[1.3rem] w-[16rem] bg-transparent border-solid border-black border-[.1rem] mt-[3.2rem]"
+        routerLink="/product-detail/yx1-earphones"
+      >
+        SEE PRODUCT
+      </button>
+    </div>
+  </div>
+  <full-stack-eshop-app-location></full-stack-eshop-app-location>
+</div>
+<full-stack-eshop-app-footer></full-stack-eshop-app-footer>

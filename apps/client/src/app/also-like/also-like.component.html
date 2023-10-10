@@ -1,0 +1,11 @@
+<a class="also-like-item" [routerLink]="alsoLikeItem.url">
+  <div class="also-like-container">
+    <div class="also-like-container-image">
+      <img [src]="alsoLikeItem.imgPath" [alt]="alsoLikeItem.name" />
+    </div>
+    <div class="also-like-details">
+      <h3>{{ alsoLikeItem.name }}</h3>
+      <button>See Product</button>
+    </div>
+  </div>
+</a>

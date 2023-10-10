@@ -1,0 +1,126 @@
+<div
+  class="w-full h-auto left-0 top-0 bg-image-header bg-center bg-cover bg-no-repeat header mb-[9.2rem] md:h-full md:pt-[3.2rem] md:pr-[16.4rem] md:pb-[3.6rem] md:pl-[16.6rem]"
+>
+  <div
+    class="flex justify-between w-full px-[2.4rem] py-[3.2rem] md:flex md:justify-between md:items-center md:flex-row md:uppercase"
+  >
+    <div class="hamburger-menu md:hidden">
+      <img src="../../assets/hamburger-menu.svg" alt="logo" />
+    </div>
+    <div class="logo">
+      <img src="../../assets/logo.svg" alt="logo" />
+    </div>
+    <div
+      class="hidden md:flex md:justify-center md:items-center md:flex-row md:uppercase"
+    >
+      <a
+        class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2"
+        routerLink="/home"
+        >Home</a
+      >
+      <a
+        class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2"
+        routerLink="/headphones"
+        >Headphones</a
+      >
+      <a
+        class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2"
+        routerLink="/speakers"
+        >Speakers</a
+      >
+      <a
+        class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2"
+        routerLink="/earphones"
+        >Earphones</a
+      >
+    </div>
+    <!-- cart -->
+    <div class="flex items-center justify-center gap-[2rem] relative">
+      <div class="relative">
+        <img src="../../assets/cart.svg" alt="logo" (click)="toggleCart()" />
+        <ng-container *ngIf="cartTotalItems$ | async as cartTotalItems">
+          <span
+            class="flex items-center justify-center p-2 absolute w-4 h-4 text-xs rounded-full top-[-.2rem] right-[3.5rem] text-white bg-orange2 md:flex md:items-center md:justify-center md:p-[.6rem] md:w-4 md:h-4 md:text-[.8rem] md:rounded-[50%] md:top-[-.5rem] md:right-[3.2rem] md:text-white md:bg-orange2"
+          >
+            {{ cartTotalItems }}
+          </span>
+        </ng-container>
+      </div>
+
+      <!-- <div class="flex"> -->
+      <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+        <div
+          *ngIf="auth.user$ | async as user"
+          class="flex items-center w-[50%] flex-col gap-[.5rem]"
+        >
+          <h1 class="text-white">{{ user.nickname }}</h1>
+          <img
+            [src]="user.picture"
+            class="w-[2.4rem] bg-white rounded-[100%] mx-[2rem] my-0 h-[50%]"
+            alt="User profile picture"
+          />
+          <button
+            class="text-white"
+            (click)="
+              auth.logout({
+                logoutParams: { returnTo: document.location.origin }
+              })
+            "
+          >
+            Log out
+          </button>
+        </div>
+      </ng-container>
+
+      <ng-template #loggedOut>
+        <div>
+          <button (click)="loginWithRedirect()">
+            <img
+              class="w-[2.4rem] max-w-[8rem] h-[2.8rem]"
+              src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png"
+              alt=""
+            />
+          </button>
+        </div>
+      </ng-template>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div *ngIf="showCart" class="cart-pop-up">
+    <full-stack-eshop-app-cart-pop-up></full-stack-eshop-app-cart-pop-up>
+  </div>
+  <div
+    class="grid grid-cols-1 grid-rows-1 justify-center text-center text-white items-center md:flex md:justify-start md:items-start md:flex-col md:w-full md:h-auto"
+  >
+    <div class="flex justify-center items-center">
+      <p
+        class="not-italic font-[400] tracking-[1rem] uppercase mt-[8rem] opacity-50 p-[2.4rem] md:h-auto leading-[1.9rem] md:font-normal md:text-[1.4rem] md:tracking-[1rem] md:pl-0"
+      >
+        NEW PRODUCT
+      </p>
+    </div>
+    <div class="flex justify-center items-center">
+      <h2
+        class="text-[3.5rem] leading-[4rem] tracking-wider uppercase px-[1rem] py-0 md:h-auto md:font-bold md:text-[5.6rem] md:leading-[5.8rem] md:text-start md:tracking-[.2rem] md:pl-0"
+      >
+        XX99 Mark II HeadphoneS
+      </h2>
+    </div>
+    <div class="flex justify-center items-center">
+      <p
+        class="text-[2rem] leading-[2.5rem] opacity-75 p-[2.8rem] md:font-medium md:text-[1.5rem] md:leading-[2.5rem] md:opacity-75 md:text-start md:px-0 md:py-[2.4rem] md:w-[30rem]"
+      >
+        Experience natural, lifelike audio and exceptional build quality made
+        for the passionate music enthusiast.
+      </p>
+    </div>
+    <div class="flex justify-center items-center">
+      <button
+        class="bg-orange2 text-white h-[5.6rem] font-bold text-[1.9rem] tracking-[.1rem] mb-[10.5rem] w-2/4 md:pt-0 md:w-[16rem] md:h-[4.8rem] md:text-center md:font-bold md:text-[1.3rem] md:leading-[1.8rem] md:border-none md:cursor-pointer"
+        routerLink="/product-detail/xx99-mark-two-headphones"
+      >
+        SEE PRODUCT
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+// .header {
+//   position: absolute;
+//   width: 100%;
+//   height: auto;
+//   left: 0;
+//   top: 0;
+//   background-color: black;
+//   margin-bottom: 1.6rem;
+// }
+
+// .header .navigation .menu {
+//   display: none;
+// }
+// .navigation {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+//   padding: 3.2rem 2.4rem;
+// }
+// .cart-popup {
+//   position: absolute;
+//   top: 30px;
+//   right: 0;
+//   width: 200px;
+//   background-color: rgb(192, 13, 13);
+//   border: 1px solid #ccc;
+//   padding: 10px;
+// }
+
+// .cart-pop-up {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   left: 0;
+// }
+// .cart img {
+//   cursor: pointer;
+// }
+
+// .cart-products {
+//   display: flex;
+//   -webkit-box-align: center;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0.6rem;
+//   position: absolute;
+//   width: 1rem;
+//   height: 1rem;
+//   font-size: 0.8rem;
+//   border-radius: 50%;
+//   top: 2.6rem;
+//   right: 2rem;
+//   color: white;
+//   background-color: #d87d4a;
+// }
+
+@media only screen and (min-width: 900px) {
+  // .header {
+  //   width: 100%;
+  //   height: auto;
+  //   left: 0;
+  //   top: 0;
+  //   background-color: black;
+  //   margin-bottom: 9.2rem;
+  // }
+  // .navigation {
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   align-items: center;
+  //   width: 100%;
+  // }
+
+  // .header .navigation .menu {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: row;
+  //   text-transform: uppercase;
+
+    // a {
+    //   text-decoration: none;
+    //   color: white;
+    //   font-weight: 700;
+    //   font-size: 13px;
+    //   line-height: 25px;
+    //   letter-spacing: 2px;
+    //   padding: 1.2rem;
+    // }
+
+  //   a:hover {
+  //     color: #d87d4a;
+  //   }
+  // }
+
+  // .cart {
+  //   position: relative;
+  // }
+
+  // .header .navigation .hamburger-menu {
+  //   display: none;
+  // }
+
+  // .cart-products {
+  //   position: absolute;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   padding: 0.6rem;
+  //   position: absolute;
+  //   width: 1rem;
+  //   height: 1rem;
+  //   font-size: 0.8rem;
+  //   border-radius: 50%;
+  //   top: 3.8rem;
+  //   right: 26rem;
+  //   color: white;
+  //   background-color: #d87d4a;
+  //   top: -9px;
+  //   right: -6px;
+  // }
+}

@@ -1,0 +1,42 @@
+<div class="overlay"></div>
+<div class="pop-up-main">
+  <div class="pop-up-cart">
+    <h4>Cart ({{ cartTotalItems$ | async }})</h4>
+    <h6 (click)="removeAll()">Remove all</h6>
+  </div>
+
+  <div class="pop-up-count">
+    <div class="pop-up-count">
+      <div
+        *ngFor="let cartItem of cartItems$ | async"
+        class="pop-up-count-products"
+      >
+        <img [src]="cartItem.product.categoryImage.mobile" alt="" />
+        <div class="pop-up-count-procuts-name-price">
+          <h3>{{ cartItem.product.name }}</h3>
+          <h4>
+            {{ cartItem.product.price | currency : 'USD' : 'symbol' : '1.0-0' }}
+          </h4>
+        </div>
+        <!-- <h1>{{ cartItem.quantity }}</h1> -->
+        <div class="pop-up-count-products-input">
+          <button class="decrease-button" (click)="decrementQuantity(cartItem)">-</button>
+          <input type="number" [(ngModel)]="cartItem.quantity" />
+          <button class="increase-button" (click)="incrementQuantity(cartItem)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="total">
+      <p>TOTAL:</p>
+      <h3>
+        {{
+          calculateTotal(cartItems$ | async)
+            | currency : 'USD' : 'symbol' : '1.0-0'
+        }}
+      </h3>
+    </div>
+    <div class="checkout">
+      <button routerLink="/checkout">Checkout</button>
+    </div>
+  </div>
+</div>

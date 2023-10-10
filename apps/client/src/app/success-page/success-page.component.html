@@ -1,0 +1,48 @@
+<div class="overlay">
+  
+</div>
+<div class="success-main-big">
+  <div class="success-main">
+    <div class="success-confirmation">
+      <img src="../../assets/success.svg" alt="success" />
+      <h2>Thank you for your order</h2>
+      <h4>You will receive an email confirmation shortly.</h4>
+    </div>
+    <div class="success-details">
+      <div class="scrollable-container">
+        <ng-container *ngFor="let item of cartItems$ | async; let i = index">
+          <div class="success-details-info" *ngIf="showAll || i === 0">
+            <img [src]="item.product.categoryImage.mobile" alt="" />
+            <div class="success-name-price">
+              <h3>{{ item.product.name }}</h3>
+              <h4>{{ item.product.price | currency }}</h4>
+              <h6>x{{ item.quantity }}</h6>
+            </div>
+          </div>
+        </ng-container>
+        <div class="success-other-items" (click)="showAllItems()">
+          <div *ngIf="!showAll; else showLessBlock">
+            <h3>and {{ (cartItems$ | async)!.length - 1 }} other item(s)</h3>
+          </div>
+          <ng-template #showLessBlock>
+            <h3>View less</h3>
+          </ng-template>
+        </div>
+        <div class="success-line"></div>
+      </div>
+      <div class="success-grand-total">
+        <h3>Grand Total</h3>
+        <h2>
+          {{
+            calculateTotalSum(calculateTotal(cartItems$ | async))
+              | currency : 'USD' : 'symbol' : '1.0-0'
+          }}
+        </h2>
+      </div>
+    </div>
+
+    <button class="home" routerLink="/home" (click)="resetCart()">
+      Back to home
+    </button>
+  </div>
+</div>

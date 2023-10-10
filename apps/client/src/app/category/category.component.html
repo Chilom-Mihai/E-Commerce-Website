@@ -1,0 +1,12 @@
+<a class="no-underline text-black" [routerLink]="categoryItem.url">
+  <div class="relative h-[16.5rem] m-0 bg-white2 rounded-[0.8rem]">
+    <img class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-[35%]" [src]="categoryItem.imgPath" [alt]="categoryItem.title" />
+    <div class="absolute bottom-[2.2rem] left-1/2 -translate-x-[50%] translate-y-0">
+      <h3 class="mb-[1.6rem] uppercase font-bold tracking-[.1rem]">{{ categoryItem.title }}</h3>
+      <div class="flex gap-[.8rem] justify-center opacity-50">
+        <p>SHOP</p>
+        <span> <img src="../../assets/arrow-right.svg" alt="" /></span>
+      </div>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,229 @@
+// .main{
+//   width: 100%;
+//   padding: 0 2.4rem;
+// }
+
+// .category-list {
+//   display: grid;
+//   gap: 6.8rem;
+// }
+
+// .speaker {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   color: #ffffff;
+//   background-color: #d87d4a;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 12rem 0 2.4rem 0;
+//   border-radius: 8px;
+// }
+
+// .speaker-name {
+//   margin-top: -160px;
+// }
+
+// .speaker-container {
+//   text-align: center;
+// }
+
+// .speaker-image {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .speaker-name h2 {
+//   display: flex;
+//   justify-content: end;
+//   flex-direction: column;
+//   height: 8rem;
+//   font-size: 3.6rem;
+//   line-height: 4rem;
+//   letter-spacing: 1.2px;
+//   text-transform: uppercase;
+// }
+
+// .speaker-info p {
+//   font-size: 1.5rem;
+//   line-height: 2.5rem;
+//   text-align: center;
+//   opacity: 0.75;
+//   margin: 2.3rem;
+// }
+
+// .speaker-button {
+//   height: 4.8rem;
+//   font-weight: 700;
+//   font-size: 1.3rem;
+//   line-height: 1.8rem;
+//   letter-spacing: 1px;
+//   margin-bottom: 5.5rem;
+//   width: 16rem;
+//   background-color: black;
+//   color: white;
+// }
+
+// .speaker2 {
+//   background-image: url("../../assets/home/mobile/image-speaker-zx7.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 2.9rem 0 2.4rem 0;
+//   height: 32.7rem;
+//   border-radius: 8px;
+// }
+
+// .speaker2-info {
+//   padding: 10.1rem 10.1rem 3.2rem 2.4rem;
+
+//   h2 {
+//     height: 3.8rem;
+//     font-size: 2.2rem;
+//     line-height: 3.8rem;
+//     letter-spacing: 2px;
+//   }
+//   button {
+//     height: 4.8rem;
+//     font-weight: 700;
+//     font-size: 1.3rem;
+//     width: 16rem;
+//     background: transparent;
+//     border: 1px solid #000000;
+//   }
+// }
+
+// .earphones {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   margin: 1.9rem 0 2.4rem 0;
+//   border-radius: 80px;
+
+// .earphones-img {
+//   background: url("../../assets/home/mobile/image-earphones-yx1.jpg")
+//     center/cover no-repeat;
+//   // background-size: cover;
+//   // background-repeat: no-repeat;
+//   // background-position: center;
+//   width: 100%;
+//   height: 200px;
+//   border-radius: 0.8rem;
+// }
+
+// .earphones-info {
+//   background-color: #f1f1f1;
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+//   flex-direction: column;
+//   border-radius: 8px;
+//   width: 100%;
+//   height: 200px;
+
+// h2 {
+//   height: 38px;
+//   font-size: 28px;
+//   line-height: 38px;
+//   letter-spacing: 2px;
+//   margin-left: 2.4rem;
+// }
+
+// button {
+//   height: 4.8rem;
+//   margin-left: 2.4rem;
+//   font-weight: 700;
+//   font-size: 1.3rem;
+//   width: 16rem;
+//   background: transparent;
+//   border: 1px solid #000000;
+//   margin-top: 3.2rem;
+// }
+// }
+// }
+
+@media only screen and (min-width: 900px) {
+  // .category-list {
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   width: 100%;
+  //   height: auto;
+  // }
+
+  // .speaker {
+  //   background: url("../../assets/speaker-circle.svg") left/contain no-repeat;
+  //   background-color: #d87d4a;
+  //   height: 56rem;
+  //   position: relative;
+  // }
+
+  .speaker {
+    background: url('../../assets/speaker-circle.svg') left/contain no-repeat;
+    background-color: #d87d4a;
+  }
+
+  // .speaker-container {
+  //   right: 95px;
+  //   position: absolute;
+  //   bottom: 124px;
+  //   height: fit-content;
+  //   width: 349px;
+  //   text-align: left;
+  // }
+
+  // .speaker-name h2 {
+  //   height: 100%;
+  //   font-size: 56px;
+  //   line-height: 58px;
+  //   letter-spacing: 2px;
+  //   text-transform: uppercase;
+  // }
+
+  // .speaker-name {
+  //   text-align: start;
+  //   display: block;
+  // }
+
+  // .speaker-info p {
+  //   margin: 2.4rem 0 4rem 0;
+  //   text-align: left;
+  // }
+
+  // .speaker-button {
+  //   margin: 0;
+  // }
+  // .speaker-image {
+  //   display: none;
+  // }
+
+  // .speaker2 {
+  //   background-image: url("../../assets/speaker2-background.svg");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
+
+  // .earphones {
+  //   display: flex;
+  //   justify-content: start;
+  //   align-items: start;
+  //   flex-direction: row;
+  //   margin: 1.9rem 0 2.4rem 0;
+  //   border-radius: 80px;
+  //   // margin-top: 4.8rem;
+  //   gap: 3rem;
+  //   // margin-bottom: 20rem;
+  // }
+
+  // .earphones-info {
+  //   background-color: #f1f1f1;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: flex-start;
+  //   flex-direction: column;
+  //   border-radius: 8px;
+  //   width: 100%;
+  //   height: 200px;
+  // }
+}

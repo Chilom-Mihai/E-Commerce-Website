@@ -1,0 +1,37 @@
+<full-stack-eshop-app-header-hse [category]="earphones"></full-stack-eshop-app-header-hse>
+
+<div class="main">
+  <div class="earphones" *ngFor="let components of earphonesComponents">
+    <div class="earphones-image">
+      <img [src]="components.categoryImage.mobile" alt="" />
+    </div>
+    <div class="main-description">
+      <div class="earphones-info">
+        <h4 *ngIf="components.new">NEW PRODUCT</h4>
+      </div>
+      <div class="earphones-product">
+        <h2>{{ components.name }}</h2>
+      </div>
+
+      <div class="earphones-description">
+        <p>
+          {{ components.description }}
+        </p>
+      </div>
+
+      <div class="earphones-button">
+        <button [routerLink]="'/product-detail/' + components.slug">
+          See product
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="category-list">
+    <full-stack-eshop-app-category
+      *ngFor="let categoryItem of categoryItems"
+      [categoryItem]="categoryItem"
+    ></full-stack-eshop-app-category>
+  </div>
+  <full-stack-eshop-app-location></full-stack-eshop-app-location>
+</div>
+<full-stack-eshop-app-footer></full-stack-eshop-app-footer>

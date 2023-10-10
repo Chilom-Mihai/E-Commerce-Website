@@ -1,0 +1,97 @@
+// .location {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   // width: calc(100% - 2.4rem);
+//   width: 100%;
+//   margin: 12rem 0;
+
+  // .location-img {
+  //   background: url("../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg")
+  //     center/cover no-repeat;
+  //   width: 100%;
+  //   height: 300px;
+  //   border-radius: 0.8rem;
+  //   margin-bottom: 4rem;
+  // }
+
+  // .location-info {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: column;
+
+    // h2 {
+    //   height: 100%;
+    //   font-size: 28px;
+    //   line-height: 38px;
+    //   text-align: center;
+    //   letter-spacing: 1px;
+    //   text-transform: uppercase;
+    //   margin-bottom: 3.2rem;
+
+      // .orange-text {
+      //   color: #d87d4a;
+      // }
+    // }
+
+    // p {
+    //   font-size: 15px;
+    //   line-height: 25px;
+    //   text-align: center;
+    //   opacity: 0.5;
+    // }
+  // }
+// }
+
+@media only screen and (min-width: 900px) {
+  // .location {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   height: 588px;
+  //   flex-direction: row-reverse;
+  //   margin: 20rem 0;
+  //   width: 100%;
+  // }
+
+  // .location-info {
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   align-items: flex-start;
+  //   flex-direction: column;
+  //   width: 500px;
+  //   text-align: start;
+  //   // width: 50%;
+  //   max-width: 445px;
+  // }
+
+  // .location .location-info h2 {
+  //   font-weight: 700;
+  //   font-size: 40px;
+  //   line-height: 44px;
+  //   letter-spacing: 1.4px;
+  //   text-transform: uppercase;
+  //   text-align: left;
+  //   height: 100%;
+  // }
+
+  // .location-info p {
+  //   font-weight: 500;
+  //   font-size: 15px;
+  //   line-height: 25px;
+  //   opacity: 0.5;
+  //   text-align: start !important;
+  // }
+
+  .location .location-img {
+    // background: url("../../assets/location-desktop-img.svg") center/cover
+    //   no-repeat;
+    height: 100%;
+    border-radius: 0.8rem;
+    margin: 0;
+    background-position: center bottom;
+    width: 50%;
+  }
+}

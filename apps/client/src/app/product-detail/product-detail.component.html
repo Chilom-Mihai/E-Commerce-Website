@@ -1,0 +1,255 @@
+<!-- <full-stack-eshop-app-header-product-detail></full-stack-eshop-app-header-product-detail>
+
+<div class="body-main">
+  <button class="go-back-button" (click)="goBack()">Go Back</button>
+  <div class="product-detail" *ngIf="product">
+    <div class="product-detail-image">
+      <img [src]="product.categoryImage.mobile" alt="" />
+    </div>
+    <div class="main-description">
+      <div class="product-detail-info">
+        <h4 *ngIf="product.new">NEW PRODUCT</h4>
+      </div>
+      <div class="product-detail-product">
+        <h2>{{ product.name }}</h2>
+      </div>
+
+      <div class="product-detail-description">
+        <p>
+          {{ product.description }}
+        </p>
+      </div>
+
+      <h3>${{ product.price }}</h3>
+
+      <div class="product-detail-button">
+        <div class="quantity-input">
+          <input type="number" id="quantity" [formControl]="quantity" min="1" />
+        </div>
+        <button (click)="addToCart(product!)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="features-in-the-box">
+    <div class="features">
+      <h1>Features</h1>
+      <p [innerHTML]="product?.features"></p>
+    </div>
+    <div class="in-the-box">
+      <h1>In the Box</h1>
+      <div class="in-the-box-details">
+        <div
+          class="in-the-box-quantity"
+          *ngFor="let include of product?.includes"
+        >
+          <p>{{ include.quantity }}x</p>
+          <span>{{ include.item }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-images">
+    <div class="product-images12">
+      <img
+        src="../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg"
+        alt=""
+      />
+      <img
+        src="../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg"
+        alt=""
+      />
+    </div>
+    <div class="product-images3">
+      <img
+        src="../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="also-like">
+    <h1>you may also like</h1>
+  </div>
+  <div class="also-like-list">
+    <full-stack-eshop-app-also-like
+      *ngFor="let alsoLikeItem of alsoLikeItems"
+      [alsoLikeItem]="alsoLikeItem"
+    ></full-stack-eshop-app-also-like>
+  </div>
+
+  <div class="category-list">
+    <full-stack-eshop-app-category
+      *ngFor="let categoryItem of categoryItems"
+      [categoryItem]="categoryItem"
+    ></full-stack-eshop-app-category>
+  </div>
+  <full-stack-eshop-app-location></full-stack-eshop-app-location>
+</div>
+<full-stack-eshop-app-footer></full-stack-eshop-app-footer> -->
+
+
+<full-stack-eshop-app-header-product-detail></full-stack-eshop-app-header-product-detail>
+<!-- <app-header-hse></app-header-hse> -->
+<!-- <div class="body-main"></div> -->
+<div class="py-0 px-[2.4rem]">
+  <!-- <button class="go-back-button" (click)="goBack()">Go Back</button> -->
+  <button
+    class="font-medium text-[1.5rem] leading-[2.5rem] text-black mix-blend-normal opacity-50 bg-transparent border-none mb-[2.4rem] cursor-pointer md:mb-[5.6rem]"
+    (click)="goBack()"
+  >
+    Go Back
+  </button>
+  <!-- <div class="product-detail" *ngIf="product"> -->
+  <div
+    class="flex justify-center items-center flex-col mt-[16rem] mx-0 mb-[12rem] md:flex-row md:gap-[12.4rem]"
+    *ngIf="product"
+  >
+    <!-- <div class="product-detail-image"></div> -->
+    <div class="md:w-full">
+      <img
+        class="mb-[3.2rem] rounded-[.8rem]"
+        [src]="product.categoryImage.mobile"
+        alt=""
+      />
+    </div>
+    <!-- <div class="main-description"> -->
+    <div class="flex justify-center items-start flex-col md:w-full">
+      <!-- <div class="product-detail-info"> -->
+      <div
+        class="text-[1.4rem] leading-[1.9rem] text-center tracking-[1rem] uppercase text-orange2 h-[1.9rem] mb-[2.4rem]"
+      >
+        <h4 *ngIf="product.new">NEW PRODUCT</h4>
+      </div>
+      <div class="product-detail-product">
+        <h2
+          class="text-start w-[72%] text-[2.8rem] leading-[3.8rem] font-bold tracking-[.1rem] mb-[2.4rem] uppercase md:text-start"
+        >
+          {{ product.name }}
+        </h2>
+      </div>
+
+      <div class="product-detail-description">
+        <p class="text-[1.6rem] leading-[2.5rem] opacity-50 text-start">
+          {{ product.description }}
+        </p>
+      </div>
+
+      <h3
+        class="text-[1.8rem] font-bold leading-[2.5rem] tracking-[.12rem] uppercase text-black mx-0 mt-[2.4rem] mb-[3.1rem]"
+      >
+        ${{ product.price }}
+      </h3>
+
+      <!-- <div class="product-detail-button"> -->
+      <div class="flex justify-center items-center flex-row">
+        <div class="quantity-input">
+          <input
+            class="w-[12rem] h-[4.8rem] bg-white2 border-none mr-[1.6rem] text-[1.3rem] leading-[1.8rem] text-center tracking-[.1rem] uppercase text-black"
+            type="number"
+            id="quantity"
+            [formControl]="quantity"
+            min="1"
+          />
+        </div>
+        <button
+          class="h-[4.8rem] text-[1.3rem] leading-[1.8rem] tracking-[.1rem] uppercase text-white bg-orange2 w-[16rem] cursor-pointer border-none md:hover:bg-orangeHover"
+          (click)="addToCart(product!)"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="features-in-the-box"> -->
+  <div class="md:mt-[16rem] md:grid md:grid-cols-2">
+    <!-- <div class="features"> -->
+    <div class="flex justify-center items-start flex-col">
+      <h1 class="mb-[2.4rem] uppercase md:mb-[3.2rem]">Features</h1>
+      <p
+        class="font-medium text-[1.5rem] leading-[2.5rem] text-black opacity-50"
+        [innerHTML]="product?.features"
+      ></p>
+    </div>
+    <!-- <div class="in-the-box"> -->
+    <div class="flex w-[100%] justify-start items-start flex-col">
+      <h1
+        class="text-start mt-[8.8rem] w-full mx-0 mb-[2.4rem] md:mt-0 md:mr-0 md:mb-[6.5rem] md:ml-[13.5rem]"
+      >
+        In the Box
+      </h1>
+      <!-- <div class="in-the-box-details"> -->
+      <div
+        class="w-[100%] flex justify-center items-center flex-col md:ml-[12.5rem]"
+      >
+        <!-- <div class="in-the-box-quantity"></div> -->
+        <div
+          class="flex justify-start items-center w-full"
+          *ngFor="let include of product?.includes"
+        >
+          <p
+            class="font-bold text-[1.5rem] leading-[2.5rem] text-orange2 mb-[.8rem]"
+          >
+            {{ include.quantity }}x
+          </p>
+          <span
+            class="w-[80%] font-medium text-[1.5rem] leading-[2.5rem] text-black opacity-50 ml-[2.4rem] mb-[.8rem]"
+            >{{ include.item }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="product-images"> -->
+  <div
+    class="flex justify-center items-center w-full flex-col px-0 pt-[8.8rem] pb-[12rem] md:w-full md:h-full md:flex md:justify-center md:items-start md:flex-row md:gap-12 md:rounded-[.8rem]"
+  >
+    <!-- <div class="product-images12"> -->
+    <div class="md:flex md:justify-around md:items-center md:flex-col md:gap-8">
+      <img
+        class="rounded-[.8rem] mb-8"
+        src="../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg"
+        alt=""
+      />
+      <img
+        class="rounded-[.8rem] mb-8"
+        src="../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="rounded-[.8rem] mb-8"
+        src="../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <!-- <div class="also-like"> -->
+  <div class="text-center">
+    <h1
+      class="md:font-bold md:text-[3.2rem] md:leading-[3.6rem] md:tracking-[.11rem] md:uppercase md:mb-[6.4rem]"
+    >
+      you may also like
+    </h1>
+  </div>
+  <!-- <div class="also-like-list"> -->
+  <div
+    class="mx-0 mt-[4rem] mb-[12rem] md:flex md:justify-center md:items-center md:gap-28"
+  >
+    <full-stack-eshop-app-also-like
+      *ngFor="let alsoLikeItem of alsoLikeItems"
+      [alsoLikeItem]="alsoLikeItem"
+    ></full-stack-eshop-app-also-like>
+  </div>
+
+  <!-- <div class="category-list"> -->
+  <div class="grid gap-[6.8rem] md:grid-cols-3 md:w-full md:h-auto">
+    <full-stack-eshop-app-category
+      *ngFor="let categoryItem of categoryItems"
+      [categoryItem]="categoryItem"
+    ></full-stack-eshop-app-category>
+  </div>
+  <full-stack-eshop-app-location></full-stack-eshop-app-location>
+</div>
+<full-stack-eshop-app-footer></full-stack-eshop-app-footer>

@@ -1,0 +1,124 @@
+.also-like-item {
+  text-decoration: none;
+  color: black;
+}
+
+.also-like-details {
+  bottom: 2.2rem;
+}
+
+.also-like-details > h3 {
+  margin-bottom: 1.6rem;
+}
+
+.also-like-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  border-radius: 0.8rem;
+  width: 100%;
+}
+
+.also-like-container-image {
+  background-color: #f1f1f1;
+  width: 327px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  border-radius: 8px;
+}
+
+.also-like-container .also-like-container-image > img {
+  margin: 1.2rem 0;
+  width: 73px;
+  height: 95px;
+  margin-bottom: 3.2rem;
+  font-size: smaller;
+}
+
+.also-like-details h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+.also-like-details button{
+  cursor: pointer;
+}
+
+.also-like-container button {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #d87d4a;
+  color: white;
+  height: 18px;
+  border: none;
+  height: 4.8rem;
+  width: 16rem;
+  margin-bottom: 5.6rem;
+}
+
+@media only screen and (min-width: 900px) {
+  // .also-like-container > img {
+  //   height: auto;
+  //   width: auto;
+  // }
+
+  // .also-like-details {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: column;
+  // }
+
+  // .also-like-details > h3 {
+  //   width: 150px;
+  //   height: 25px;
+  //   font-size: 18px;
+  //   text-align: center;
+  //   letter-spacing: 1.28571px;
+  //   text-transform: uppercase;
+  // }
+
+  .also-like-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    border-radius: 0.8rem;
+    width: 100%;
+  }
+
+  .also-like-container-image{
+    background-color: #f1f1f1;
+    width: 30rem;
+    height: 21.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .also-like-container .also-like-container-image img{
+      width: 148px;
+      height: 193px;
+  }
+}

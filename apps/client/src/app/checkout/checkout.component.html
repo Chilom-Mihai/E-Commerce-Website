@@ -1,0 +1,137 @@
+<full-stack-eshop-app-header-product-detail></full-stack-eshop-app-header-product-detail>
+<div class="body">
+  <div class="go-back">
+    <button>Go Back</button>
+  </div>
+  <div class="checkout-body-main">
+    <div class="checkout-main">
+      <h1>Checkout</h1>
+
+      <div class="checkout-details">
+        <h3>Billing Details</h3>
+        <div class="name">
+          <h6>Name</h6>
+          <ng-container *ngIf="auth.user$ | async as user; else nameInput">
+            <input
+              type="text"
+              placeholder="Alexei Ward"
+              [(ngModel)]="user.name"
+            />
+          </ng-container>
+          <ng-template #nameInput>
+            <input type="text" placeholder="Alexei Ward" />
+          </ng-template>
+        </div>
+        <div class="email-address">
+          <h6>Email Address</h6>
+          <ng-container *ngIf="auth.user$ | async as user; else emailInput">
+            <input
+              id="txtComputer"
+              type="email"
+              placeholder="alexei@mail.com"
+              [(ngModel)]="user.email"
+            />
+          </ng-container>
+          <ng-template #emailInput>
+            <input type="email" placeholder="alexei@mail.com" />
+          </ng-template>
+        </div>
+        <div class="phone-number">
+          <h6>Phone Number</h6>
+          <input type="number" placeholder="+1 202-555-0136" />
+        </div>
+      </div>
+
+      <h3>Shipping Info</h3>
+      <div class="checkout-shipping-info">
+        <div class="address">
+          <h6>Your Address</h6>
+          <input type="text" placeholder="1137 Williams Avenue" />
+        </div>
+        <div class="zip-code">
+          <h6>Zip Code</h6>
+          <input type="number" placeholder="10001" />
+        </div>
+        <div class="city">
+          <h6>city</h6>
+          <input type="text" placeholder="New York" />
+        </div>
+        <div class="country">
+          <h6>Country</h6>
+
+          <input
+            id="txtComputer"
+            type="text"
+            placeholder="Country"
+            [(ngModel)]="userLocale"
+          />
+        </div>
+      </div>
+
+      <div class="checkout-payment-details">
+        <h6>Payment Details</h6>
+        <div class="method-money"></div>
+        <h5>Payment Method</h5>
+        <label for="e-money">
+          <input type="radio" checked id="e-money" name="payment" />
+          E-Money
+        </label>
+        <label for="cash">
+          <input type="radio" id="cash" name="payment" />
+          Cash on Delivery
+        </label>
+        <h5>e-Money Number</h5>
+        <input type="number" placeholder="238521993" class="input" />
+        <h5>e-Money PIN</h5>
+        <input type="number" placeholder="6891" class="input" />
+      </div>
+    </div>
+    <div class="checkout-summary">
+      <h1>SUMMARY</h1>
+      <div
+        class="checkout-summary-components"
+        *ngFor="let item of cartItems$ | async"
+      >
+        <img [src]="item.product.categoryImage.mobile" />
+        <div class="checkout-summary-components-product">
+          <h3>{{ item.product.name }}</h3>
+          <h4>{{ item.product.price | currency }}</h4>
+        </div>
+        <h5>{{ item.quantity }}x</h5>
+      </div>
+      <div class="checkout-summary-total-price">
+        <div class="checkout-summary-total">
+          <p>Total</p>
+          <p>SHIPPING</p>
+          <p>VAT (INCLUDED)</p>
+          <p>GRAND TOTAL</p>
+        </div>
+        <div class="checkout-summary-price">
+          <h4>
+            {{
+              calculateTotal(cartItems$ | async)
+                | currency : 'USD' : 'symbol' : '1.0-0'
+            }}
+          </h4>
+          <h4>{{ shippingTax | currency : 'USD' : 'symbol' : '1.0-0' }}</h4>
+          <h4>{{ vatAmount | currency : 'USD' : 'symbol' : '1.0-0' }}</h4>
+          <h4>
+            {{
+              calculateTotalSum(calculateTotal(cartItems$ | async))
+                | currency : 'USD' : 'symbol' : '1.0-0'
+            }}
+          </h4>
+        </div>
+      </div>
+      <div class="continue-pay">
+        <!-- <button (click)="togglePay()">Continue & Pay</button> -->
+        <button (click)="onCkeckout()">Continue & Pay</button>
+      </div>
+    </div>
+  </div>
+</div>
+<full-stack-eshop-app-success-page
+  class="success-page"
+  *ngIf="showCheckout"
+></full-stack-eshop-app-success-page>
+<full-stack-eshop-app-footer></full-stack-eshop-app-footer>

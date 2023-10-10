@@ -1,0 +1,37 @@
+<div class="w-full h-auto left-0 right-0 mb-[12rem] bg-black md:mb-[9.2rem]">
+  <div
+    class="flex justify-between w-full py-[3.2rem] px-[2.4rem] md:flex md:justify-between md:items-center md:w-[85%]"
+  >
+    <div class="hamburger-menu">
+      <img class="md:hidden" src="../../assets/hamburger-menu.svg" alt="logo" />
+    </div>
+    <div class="logo">
+      <img src="../../assets/logo.svg" alt="logo" />
+    </div>
+    <div
+      class="hidden md:flex md:justify-center md:items-center md:flex-row md:uppercase"
+    >
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/home">Home</a>
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/headphones">Headphones</a>
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/speakers">Speakers</a>
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/earphones">Earphones</a>
+    </div>
+    <div class="popup">
+      <div class="md:relative">
+        <img class="md:cursor-pointer" src="../../assets/cart.svg" alt="logo" (click)="toggleCart()" />
+        <ng-container *ngIf="cartTotalItems$ | async as cartTotalItems">
+          <span class="flex items-center justify-center p-[.6rem] absolute w-[1rem] h-[1rem] text-[.8rem] rounded-[50%] top-[2.6rem] right-[2rem] text-white bg-orange2 md:top-[-.6rem] md:right-[-.9rem]">
+            {{ cartTotalItems }}
+          </span>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showCart" class="cart-pop-up">
+    <full-stack-eshop-app-cart-pop-up></full-stack-eshop-app-cart-pop-up>
+  </div>
+ 
+  <div class="text-white flex justify-center items col-end-1 py-[3.2rem] px-[8.4rem] uppercase">
+    <h1>{{ category }}</h1>
+  </div>
+</div>

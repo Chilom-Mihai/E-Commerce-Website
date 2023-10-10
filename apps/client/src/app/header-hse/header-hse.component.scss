@@ -1,0 +1,116 @@
+// .header {
+//   width: 100%;
+//   height: auto;
+//   left: 0;
+//   top: 0;
+//   background-color: black;
+//   // margin-bottom: 6.4rem;
+// }
+
+// .header .navigation .menu {
+//   display: none;
+// }
+
+// .navigation {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+//   padding: 3.2rem 2.4rem;
+// }
+
+// .details {
+//   color: white;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 3.2rem 8.4rem;
+//   text-transform: uppercase;
+// }
+
+// .cart-products {
+//   display: flex;
+//   -webkit-box-align: center;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0.6rem;
+//   position: absolute;
+//   width: 1rem;
+//   height: 1rem;
+//   font-size: 0.8rem;
+//   border-radius: 50%;
+//   top: 2.6rem;
+//   right: 2rem;
+//   color: white;
+//   background-color: #d87d4a;
+// }
+
+@media only screen and (min-width: 900px) {
+  // .header {
+  //   width: 100%;
+  //   height: auto;
+  //   left: 0;
+  //   top: 0;
+  //   background-color: black;
+  //   margin-bottom: 9.2rem;
+  // }
+
+  // .navigation {
+  //   display: flex;
+  //   justify-content: space-evenly;
+  //   align-items: center;
+  //   width: 85%;
+  // }
+
+  // .header .navigation .menu {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: row;
+  //   text-transform: uppercase;
+
+    // a {
+    //   text-decoration: none;
+    //   color: white;
+    //   font-weight: 700;
+    //   font-size: 13px;
+    //   line-height: 25px;
+    //   letter-spacing: 2px;
+    //   padding: 1.2rem;
+    // }
+
+  //   a:hover {
+  //     color: #d87d4a;
+  //   }
+  // }
+
+  // .header .navigation .hamburger-menu img {
+  //   display: none;
+  // }
+
+  // .cart {
+  //   position: relative;
+
+  //   img{
+  //     cursor: pointer;
+  //   }
+  // }
+
+  // .cart-products {
+  //   position: absolute;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   padding: 0.6rem;
+  //   position: absolute;
+  //   width: 1rem;
+  //   height: 1rem;
+  //   font-size: 0.8rem;
+  //   border-radius: 50%;
+  //   top: 3.8rem;
+  //   right: 26rem;
+  //   color: white;
+  //   background-color: #d87d4a;
+  //   top: -9px;
+  //   right: -6px;
+  // }
+}

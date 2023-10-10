@@ -1,0 +1,27 @@
+<div class="absolute w-full h-auto left-0 top-0 bg-black mb-[1.6rem] md:mb-[9.2rem] md:justify-evenly md:items-center">
+  <div class="flex justify-between w-full py-[3.2rem] px-[2.4rem]">
+    <div class="md:hidden">
+      <img src="../../assets/hamburger-menu.svg" alt="logo" />
+    </div>
+    <div class="logo">
+      <img src="../../assets/logo.svg" alt="logo" />
+    </div>
+    <div class="hidden  md:flex md:justify-center md:items-center md:flex-row md:uppercase">
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/home">Home</a>
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/headphones">Headphones</a>
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2" routerLink="/speakers">Speakers</a>
+      <a class="md:no-underline md:text-white md:font-bold md:text-[1.3rem] md:leading-[2.5rem] md:tracking-[.2rem] md:p-[1.2rem] md:hover:text-orange2"routerLink="/earphones">Earphones</a>
+    </div>
+    <div class="md:relative">
+      <img class="cursor-pointer" src="../../assets/cart.svg" alt="logo" (click)="toggleCart()" />
+      <ng-container *ngIf="cartTotalItems$ | async as cartTotalItems">
+        <span class="flex items-center justify-center p-[.6rem] absolute w-[1rem] h-[1rem] text-[.8rem] rounded-[50%] top-[2.6rem] right-[2rem] text-white bg-orange2 md:top-[-.6rem] md:right-[-.9rem]">
+          {{ cartTotalItems }}
+        </span>
+      </ng-container>
+    </div>
+  </div>
+  <div *ngIf="showCart" class="flex justify-center items-center w-full left-0">
+    <full-stack-eshop-app-cart-pop-up></full-stack-eshop-app-cart-pop-up>
+  </div>
+</div>
